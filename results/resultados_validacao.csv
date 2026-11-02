@@ -1,0 +1,5 @@
+modelo,melhores_parametros,val_accuracy,val_precision,val_recall,val_f1,val_roc_auc
+Regressão Logística,"{'C': 1, 'class_weight': 'balanced'}",0.9736842105263158,0.9545454545454546,0.9767441860465116,0.9655172413793104,0.996069439895185
+Árvore de Decisão,"{'class_weight': 'balanced', 'max_depth': 8, 'min_samples_leaf': 1}",0.956140350877193,0.9130434782608695,0.9767441860465116,0.9438202247191011,0.9602030789387487
+KNN,"{'n_neighbors': 7, 'weights': 'distance'}",0.9736842105263158,1.0,0.9302325581395349,0.963855421686747,0.99737962659679
+Random Forest,"{'class_weight': None, 'max_depth': None, 'min_samples_leaf': 1, 'n_estimators': 300}",0.9736842105263158,0.9761904761904762,0.9534883720930233,0.9647058823529412,0.9918113331149689

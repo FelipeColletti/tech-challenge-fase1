@@ -1,0 +1,262 @@
+{
+  "resumo_dados": {
+    "linhas": 569,
+    "colunas": 31,
+    "valores_ausentes": 0,
+    "duplicatas": 0,
+    "distribuicao_alvo": {
+      "Benigno": 357,
+      "Maligno": 212
+    }
+  },
+  "pares_alta_correlacao": [
+    [
+      "radius_mean",
+      "perimeter_mean",
+      0.998
+    ],
+    [
+      "radius_worst",
+      "perimeter_worst",
+      0.994
+    ],
+    [
+      "radius_mean",
+      "area_mean",
+      0.987
+    ],
+    [
+      "perimeter_mean",
+      "area_mean",
+      0.987
+    ],
+    [
+      "radius_worst",
+      "area_worst",
+      0.984
+    ],
+    [
+      "perimeter_worst",
+      "area_worst",
+      0.978
+    ],
+    [
+      "radius_se",
+      "perimeter_se",
+      0.973
+    ],
+    [
+      "radius_mean",
+      "radius_worst",
+      0.97
+    ],
+    [
+      "perimeter_mean",
+      "perimeter_worst",
+      0.97
+    ],
+    [
+      "perimeter_mean",
+      "radius_worst",
+      0.969
+    ],
+    [
+      "radius_mean",
+      "perimeter_worst",
+      0.965
+    ],
+    [
+      "area_mean",
+      "radius_worst",
+      0.963
+    ],
+    [
+      "area_mean",
+      "perimeter_worst",
+      0.959
+    ],
+    [
+      "area_mean",
+      "area_worst",
+      0.959
+    ],
+    [
+      "radius_se",
+      "area_se",
+      0.952
+    ],
+    [
+      "perimeter_mean",
+      "area_worst",
+      0.942
+    ],
+    [
+      "radius_mean",
+      "area_worst",
+      0.941
+    ],
+    [
+      "perimeter_se",
+      "area_se",
+      0.938
+    ],
+    [
+      "concavity_mean",
+      "concave_points_mean",
+      0.921
+    ],
+    [
+      "texture_mean",
+      "texture_worst",
+      0.912
+    ],
+    [
+      "concave_points_mean",
+      "concave_points_worst",
+      0.91
+    ]
+  ],
+  "modelo_escolhido": "Regressão Logística",
+  "validacao": [
+    {
+      "modelo": "Regressão Logística",
+      "melhores_parametros": {
+        "C": 1,
+        "class_weight": "balanced"
+      },
+      "val_accuracy": 0.9736842105263158,
+      "val_precision": 0.9545454545454546,
+      "val_recall": 0.9767441860465116,
+      "val_f1": 0.9655172413793104,
+      "val_roc_auc": 0.996069439895185
+    },
+    {
+      "modelo": "Árvore de Decisão",
+      "melhores_parametros": {
+        "class_weight": "balanced",
+        "max_depth": 8,
+        "min_samples_leaf": 1
+      },
+      "val_accuracy": 0.956140350877193,
+      "val_precision": 0.9130434782608695,
+      "val_recall": 0.9767441860465116,
+      "val_f1": 0.9438202247191011,
+      "val_roc_auc": 0.9602030789387487
+    },
+    {
+      "modelo": "KNN",
+      "melhores_parametros": {
+        "n_neighbors": 7,
+        "weights": "distance"
+      },
+      "val_accuracy": 0.9736842105263158,
+      "val_precision": 1.0,
+      "val_recall": 0.9302325581395349,
+      "val_f1": 0.963855421686747,
+      "val_roc_auc": 0.99737962659679
+    },
+    {
+      "modelo": "Random Forest",
+      "melhores_parametros": {
+        "class_weight": null,
+        "max_depth": null,
+        "min_samples_leaf": 1,
+        "n_estimators": 300
+      },
+      "val_accuracy": 0.9736842105263158,
+      "val_precision": 0.9761904761904762,
+      "val_recall": 0.9534883720930233,
+      "val_f1": 0.9647058823529412,
+      "val_roc_auc": 0.9918113331149689
+    }
+  ],
+  "teste": [
+    {
+      "modelo": "Regressão Logística",
+      "accuracy": 0.9736842105263158,
+      "precision": 0.9534883720930233,
+      "recall": 0.9761904761904762,
+      "f1": 0.9647058823529412,
+      "roc_auc": 0.9953703703703705
+    },
+    {
+      "modelo": "Árvore de Decisão",
+      "accuracy": 0.956140350877193,
+      "precision": 0.9512195121951219,
+      "recall": 0.9285714285714286,
+      "f1": 0.9397590361445783,
+      "roc_auc": 0.9503968253968254
+    },
+    {
+      "modelo": "KNN",
+      "accuracy": 0.9473684210526315,
+      "precision": 0.9736842105263158,
+      "recall": 0.8809523809523809,
+      "f1": 0.925,
+      "roc_auc": 0.9842923280423281
+    },
+    {
+      "modelo": "Random Forest",
+      "accuracy": 0.956140350877193,
+      "precision": 0.9743589743589743,
+      "recall": 0.9047619047619048,
+      "f1": 0.9382716049382716,
+      "roc_auc": 0.9966931216931217
+    }
+  ],
+  "limiar_recall_98": 0.15,
+  "analise_limiar": [
+    {
+      "limiar": 0.15,
+      "accuracy": 0.9210526315789473,
+      "precision": 0.8367346938775511,
+      "recall": 0.9761904761904762,
+      "f1": 0.9010989010989011,
+      "roc_auc": 0.9953703703703705
+    },
+    {
+      "limiar": 0.5,
+      "accuracy": 0.9736842105263158,
+      "precision": 0.9534883720930233,
+      "recall": 0.9761904761904762,
+      "f1": 0.9647058823529412,
+      "roc_auc": 0.9953703703703705
+    }
+  ],
+  "top_shap": {
+    "texture_worst": 1.179,
+    "concave_points_mean": 0.8288,
+    "radius_se": 0.7421,
+    "symmetry_worst": 0.6775,
+    "compactness_se": 0.6267,
+    "concavity_worst": 0.6079,
+    "radius_worst": 0.5847,
+    "area_worst": 0.5393,
+    "concavity_mean": 0.5392,
+    "concave_points_se": 0.4763
+  },
+  "top_random_forest": {
+    "perimeter_worst": 0.1482,
+    "area_worst": 0.1329,
+    "concave_points_mean": 0.107,
+    "concave_points_worst": 0.1068,
+    "radius_mean": 0.0676,
+    "radius_worst": 0.0659,
+    "perimeter_mean": 0.0511,
+    "concavity_mean": 0.0434,
+    "area_mean": 0.0388,
+    "concavity_worst": 0.0341
+  },
+  "top_permutation": {
+    "texture_worst": 0.0675,
+    "symmetry_worst": 0.0484,
+    "concavity_worst": 0.0484,
+    "concave_points_worst": 0.0389,
+    "smoothness_worst": 0.0389,
+    "concave_points_mean": 0.0341,
+    "perimeter_worst": 0.0341,
+    "concavity_mean": 0.0333,
+    "radius_worst": 0.0333,
+    "perimeter_mean": 0.031
+  }
+}
